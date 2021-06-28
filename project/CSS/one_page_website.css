@@ -1,0 +1,12 @@
+html {
+    font-family:sans-serif;
+    font-size: 50%;
+    width:100px;
+    margin-top:auto;
+    margin-right:auto;
+    margin-bottom:auto;
+    margin-left:auto;
+    border:10px dotted red;
+    border-radius:10px;
+}
+
