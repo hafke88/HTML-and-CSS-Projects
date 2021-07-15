@@ -3,7 +3,8 @@
 	<head>
 		<title>The Turtle Show</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<link rel="stylesheet" href="CSS/one_page_website.css">
+		<script src="JS/one_page_website.js"></script>
 	</head>
 	<body>
 	
@@ -30,29 +31,77 @@
 		</div>
 		<!--END HOME -->
 		
-		<!-- GALLERY -->
-		<section>
-			<div id="gallery">
-				<h1>Gallery</h1>
-				<div>
-				
-					<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img src="./images/thumb/turtle_1.jpeg" alt="">
-							<div>
-								<h3>Click to Englarge</h3>
-								<p>There are tons of turtle to choose from.<br>Call to order one today!</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 1 -->
-					
+		
+
+		<!-- Images used to open the lightbox -->
+		<div class="row">
+			<div class="column">
+			<img src="./Images/red_eared_slider.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="./Images/painted_turtle.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="./Images/spotted_turtle.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="./Images/map_turtle.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</div>
+		</div>
+		
+		<!-- The Modal/Lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+		
+				<div class="mySlides">
+					<div class="numbertext">1 / 4</div>
+					<img src="./Images/red_eared_slider.jpeg" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">2 / 4</div>
+					<img src="./Images/painted_turtle.jpeg" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">3 / 4</div>
+					<img src="./Images/spotted_turtle.jpeg" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">4 / 4</div>
+					<img src="./Images/map_turtle.jpeg" style="width:100%">
+				</div>
+			
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+			
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="./Images/red_eared_slider.jpeg" onclick="currentSlide(1)" alt="Red Eared Slider">
+				</div>
+			
+				<div class="column">
+					<img class="demo" src="./Images/painted_turtle.jpeg" onclick="currentSlide(2)" alt="Painted Turtle">
+				</div>
+			
+				<div class="column">
+					<img class="demo" src="./Images/spotted_turtle.jpeg" onclick="currentSlide(3)" alt="Spotted Turtle">
+				</div>
+			
+				<div class="column">
+					<img class="demo" src="./Images/map_turtle.jpeg" onclick="currentSlide(4)" alt="Map Turtle">
 				</div>
 			</div>
-		</section>
-		<!-- END GALLERY -->
-		
+		</div>		
+
 		<!-- VIDEO -->
 		<section>
 			<div id="video">
